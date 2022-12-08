@@ -46,7 +46,7 @@ class CommentController extends Controller
             'comment'=>$request->comment,
             'post_id'=>$request->id
         ]);
-        return redirect()->back()->with("message","Comment added Succefully");
+        return redirect()->back()->with("status","Comment added Succefully");
 
     }
 

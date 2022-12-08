@@ -43,7 +43,7 @@ class MailinglistController extends Controller
         mailinglist::create([
             'email'=>$request->email
         ]);
-        return redirect()->back()->with("message","Email added Succefully");
+        return redirect()->back()->with("status","Email added Succefully");
 
     }
 

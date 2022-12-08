@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Comment;
+use App\Mail\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class WebsiteController extends Controller
 {
@@ -53,5 +55,22 @@ class WebsiteController extends Controller
 
     }
 
+    public function contact()
+    {
+            return view("website.contact");
+    }
+
+    public function sendmail(Request $request)
+    {
+         $data = $request->validate([
+            'title' => 'required',
+            'name' => 'required',
+            'email' => 'required',
+            'message' => 'required'
+        ]);
+        Mail::to('m.yousef0082@gmail.com')->send(new Contact($data));
+        return redirect(route('contact'))->with("status","Your Message Sent Succefully");
+
+    }
     
 }

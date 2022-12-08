@@ -11,7 +11,7 @@
                                 <ul class="menu-link">
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="work.html">Work</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{{route('contact')}}">Contact</a></li>
                                     <li><a class="{{Request::routeIs('home') ? 'active' : ''}}" href="{{route('home')}}">Home</a></li>
                                     <li><a class="{{Request::routeIs('blog') ? 'active' : ''}}" href="{{route('blog')}}">Blog</a></li>
                                     <li><a class="{{Request::routeIs('about') ? 'active' : ''}}" href="{{route('about')}}">About</a></li>

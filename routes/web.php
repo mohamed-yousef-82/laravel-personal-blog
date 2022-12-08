@@ -27,7 +27,8 @@ Route::get('/category/{id}', [WebsiteController::class, 'showcategory'])->name('
 Route::get('/search', [WebsiteController::class, 'search'])->name('websitesearch');
 Route::post('/mailinglist', [MailinglistController::class, 'store'])->name('storemailinglist');
 Route::post('/comment/{id}', [CommentController::class, 'store'])->name('comment');
-
+Route::get('/contact', [WebsiteController::class, 'contact'])->name('contact');
+Route::post('/sendmail', [WebsiteController::class, 'sendmail'])->name('sendmail');
 
 Route::get('/blog', function () {
     return view('website.blog');
@@ -35,9 +36,9 @@ Route::get('/blog', function () {
 Route::get('/about', function () {
     return 'website.about';
 })->name('about');
-Route::get('/contact', function () {
-    return 'website.contact';
-})->name('contact');
+// Route::get('/contact', function () {
+//     return view('website.contact');
+// })->name('contact');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

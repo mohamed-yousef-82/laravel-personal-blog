@@ -36,9 +36,11 @@
                                       @if($post->category)
                                       <a href="{{ route('showcategory',$post->category->id) }}"><i class="fa fa-book"></i>{{ $post->category->category}}</a>   
                                       @endif 
-                                    </div>  
+                                    </div>
+                                    <div class="post-data">
                                     <p> {!! substr($post->details, 0,  300) !!} ...</p>
                                     <a href="{{ route('showpost',$post->id) }}" class="button button-style button-anim"><span>Read More</span></a>
+                                    </div>  
                                 </div>
                                 <!-- Blog Post End -->
                                 @empty
@@ -72,6 +74,21 @@
                         
                         <!-- Subscribe Form Start -->
                         <div class="col-md-8 col-md-offset-2">
+                          @if ($errors->any())
+                          <div class="alert alert-danger">
+                              <ul>
+                                  @foreach ($errors->all() as $error)
+                                      <li>{{ $error }}</li>
+                                  @endforeach
+                              </ul>
+                          </div>
+                      @endif
+                      @if (session('status'))
+                      <div class="alert alert-success">
+                          {{ session('status') }}
+                      </div>
+                     @endif
+
               <form method="post" action="{{route('storemailinglist')}}">
 								@csrf
 						  <div class="subscribe-form margin-top-20">

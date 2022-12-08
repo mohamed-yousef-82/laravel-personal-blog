@@ -22,7 +22,10 @@
                                     <div class="post-info">
                                     	<span>{{ $post->created_at}} / by <a href="#" target="_blank">{{$post->user->name}}</a></span>
                                       <p>
-                                        {{$post->category->category}}
+                                        @if($post->category)
+                                        <a href="{{ route('showcategory',$post->category->id) }}"><i class="fa fa-book"></i>{{ $post->category->category}}</a>   
+                                        @endif 
+  
                                       </p>
                                     </div>  
                                     <p> {!! substr($post->details, 0,  300) !!} ...</p>
