@@ -360,21 +360,23 @@ display: block;
     border-radius: 100%;
     width: 100px;
     height: 100px;
-    background: #86dcff;
+    background: #361844;
     font-size: 40px;
     margin-bottom: 10px;
-    color: #361844;
+    color: #50bfa5;
+    border: 1px dashed;
 }
 .intro-block a{
     display: block;
-    background: #e72c7c;
+    background: #361844;
     width: 100%;
     text-align: center;
     border-radius: 3px;
     padding: 5px;
-    color: #fff;
+    color: #e72c7c;
     font-weight: bold;
     margin-top: 10px;
+    border: 1px dashed;
 }
 .dash-username{
     color: #fff;
@@ -414,3 +416,4 @@ display: block;
 .ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
     fill: #be58c2 !important;
 }
+

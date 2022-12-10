@@ -32,7 +32,7 @@
                                       <a href="single.html"><h1>{{ $post->title }}</h1></a>
                                     </div>  
                                     <div class="post-info">
-                                    	<span><i class="fa fa-calendar"></i><span>{{ $post->created_at}}</span> </span>|<span class="post-info-writter"><i class="fa fa-user-o"></i> <span>{{$post->user->name}}</span></span>
+                                    	<div><span><i class="fa fa-calendar"></i><span>{{ $post->created_at}}</span> </span><span class="post-info-writter"><i class="fa fa-user-o"></i> <span>{{$post->user->name}}</span></span></div>
                                       @if($post->category)
                                       <a href="{{ route('showcategory',$post->category->id) }}"><i class="fa fa-book"></i>{{ $post->category->category}}</a>   
                                       @endif 
@@ -62,7 +62,6 @@
                                 
                              </div>
                               
-                         </div>
                          
                          @if (session()->has('message'))
                          <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -73,7 +72,6 @@
                          @endif
                         
                         <!-- Subscribe Form Start -->
-                        <div class="col-md-8 col-md-offset-2">
                           @if ($errors->any())
                           <div class="alert alert-danger">
                               <ul>
@@ -88,22 +86,8 @@
                           {{ session('status') }}
                       </div>
                      @endif
+                          </div>
 
-              <form method="post" action="{{route('storemailinglist')}}">
-								@csrf
-						  <div class="subscribe-form margin-top-20">
-							 <input id="mc-email" type="email" placeholder="Email Address" class="text-input" name="email">
-							  <button class="submit-btn" type="submit">Submit</button>
-								</div>
-                                <p>Subscribe to my weekly newsletter</p>
-								<label for="mc-email" class="mc-label"></label>
-							  </form>
-  
-                             
-                           </div>
-                           <!-- Subscribe Form End -->
-                           
-                         
 
    @endsection    
     

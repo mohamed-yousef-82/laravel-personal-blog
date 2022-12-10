@@ -1,9 +1,9 @@
-<x-guest-layout>
-    <x-auth-card>
+<x-guest-layout class="login-page">
+    <x-auth-card class="login-page-inner">
         <x-slot name="logo">
-            <a href="/">
+            {{-- <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+            </a> --}}
         </x-slot>
 
         <!-- Session Status -->
@@ -29,7 +29,6 @@
                                 type="password"
                                 name="password"
                                 required autocomplete="current-password" />
-
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
 

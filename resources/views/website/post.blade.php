@@ -5,13 +5,12 @@
                   <!-- Blog Post (Right Sidebar) Start -->
                   <div class="col-md-9">
                      <div class="col-md-12 page-body">
-                         <div class="row">
                              
                              
-                             <div class="sub-title">
+                             {{-- <div class="sub-title">
                                     <a href="/" title="Go to Home Page"><h2>Back Home</h2></a>
-                                 {{-- <a href="#comment" class="smoth-scroll"><i class="icon-bubbles"></i></a> --}}
-                              </div>
+                                 <a href="#comment" class="smoth-scroll"><i class="icon-bubbles"></i></a>
+                              </div> --}}
                              
                              
                              <div class="col-md-12 content-page">
@@ -27,19 +26,22 @@
                                      
                                  <!-- Post Detail Start -->
                                  <div class="post-info">
-                                    <span><i class="fa fa-calendar"></i><span>{{ $post->created_at}}</span> </span>|<span class="post-info-writter"><i class="fa fa-user-o"></i> <span>{{$post->user->name}}</span></span>
-                                    </div>
-                                    <!-- Post Detail End -->
-                                     
+                                    <div><span><i class="fa fa-calendar"></i><span>{{ $post->created_at}}</span> </span><span class="post-info-writter"><i class="fa fa-user-o"></i> <span>{{$post->user->name}}</span></span></div>
+                                   @if($post->category)
+                                   <a href="{{ route('showcategory',$post->category->id) }}"><i class="fa fa-book"></i>{{ $post->category->category}}</a>   
+                                   @endif 
+                                 </div>
+                                 <!-- Post Detail End -->
+                                                                      <!-- Post Image Start -->
+                                 <div class="post-image margin-top-40 margin-bottom-40">
+                                    <img src="{{asset('uploads/'.$post->image)}} " alt="">
+                                   </div>
+                                   <!-- Post Image End -->
+
                                      
                                      <p>{!! $post->details !!}</p>
                                      
                                  
-                                 <!-- Post Image Start -->
-                                 <div class="post-image margin-top-40 margin-bottom-40">
-                                    <img src="{{ $post->image}} " alt="">
-                                   </div>
-                                   <!-- Post Image End -->
                                    
                                    {{-- {{$related}} --}}
                                    <!-- Post Image Gallery Start -->
@@ -63,7 +65,6 @@
                                  </div>    
                               </div>
                                
-                          </div>
                           
                            <div id="fbcomment">
                               <div class="header_comment">
@@ -154,20 +155,7 @@
                            </div>
 
                          
-                         <!-- Subscribe Form Start -->
-                         <div class="col-md-8 col-md-offset-2">
-                            <form id="mc-form" method="post" action="">
-                                 
-                           <div class="subscribe-form margin-top-20">
-                              <input id="mc-email" type="email" placeholder="Email Address" class="text-input">
-                               <button class="submit-btn" type="submit">Submit</button>
-                                 </div>
-                                 <p>Subscribe to my weekly newsletter</p>
-                                 <label for="mc-email" class="mc-label"></label>
-                               </form>
-                              
-                            </div>
-                            <!-- Subscribe Form End -->
+         
                           </div>
                    <!-- Blog Post (Right Sidebar) End -->
                    @endsection

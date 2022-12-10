@@ -21,6 +21,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 |
 */
 
+/*-----Website Routs-----*/ 
 Route::get('/', [WebsiteController::class, 'index'])->name('home');
 Route::get('/article/{id}', [WebsiteController::class, 'showpost'])->name('showpost');
 Route::get('/category/{id}', [WebsiteController::class, 'showcategory'])->name('showcategory');
@@ -30,20 +31,7 @@ Route::post('/comment/{id}', [CommentController::class, 'store'])->name('comment
 Route::get('/contact', [WebsiteController::class, 'contact'])->name('contact');
 Route::post('/sendmail', [WebsiteController::class, 'sendmail'])->name('sendmail');
 
-Route::get('/blog', function () {
-    return view('website.blog');
-})->name('blog');
-Route::get('/about', function () {
-    return 'website.about';
-})->name('about');
-// Route::get('/contact', function () {
-//     return view('website.contact');
-// })->name('contact');
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
+/*-----Dashboard Routs-----*/ 
 Route::group(['prefix' => 'dashboard','middleware' => 'auth'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('dashboard');
     Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
