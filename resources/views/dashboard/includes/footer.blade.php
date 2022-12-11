@@ -5,7 +5,7 @@
 {{-- <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"> --}}
 {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> --}}
-<script src="{{asset('assets/js/bootstrap.min.js')}}" ></script>
+<script src="{{asset('assets/dashboard/js/bootstrap.min.js')}}" ></script>
   
 <!-- Editor  -->
 {{-- <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>

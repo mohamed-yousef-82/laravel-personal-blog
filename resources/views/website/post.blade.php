@@ -48,13 +48,14 @@
                                    <h3>Related Posts</h3>
                                    <hr />
                                    <div class="related-posts">
-                                   <div class="row margin-top-40 margin-bottom-40">
+                                   <div class="margin-top-10 margin-bottom-10">
                                     @forelse($related as $repost)
                                      <div class="col-md-4 col-sm-6 col-xs-12">
-                                       <a href="images/blog/7.jpg" title="image Title">
+                                       <a href="{{ route('showpost',$repost->id) }}" target="_blank">
                                        <img src="{{asset('uploads/'.$repost->image)}}" class="img-responsive" alt="">
-                                      </a>
+                                      
                                       <p>{{$repost->title}}</p>
+                                    </a>
                                      </div>
                                      @empty
                                      <p>No Related Posts To Show</p>
@@ -62,11 +63,12 @@
                                   </div>
                                  </div>
                                   <!-- Post Image Gallery End -->
-                                 </div>    
-                              </div>
                                
                           
                            <div id="fbcomment">
+                              {{-- <h3>Add Comment</h3> --}}
+                              <hr />
+
                               <div class="header_comment">
                                  <div class="row">
                                     <div class="col-md-6 text-left">
@@ -86,7 +88,7 @@
                               <div class="body_comment">
                                  <div class="row">
                                     <div class="avatar_comment col-md-1">
-                                       <img src="{{asset('assets\images\blog\avatar.jpg')}}" alt="avatar" />
+                                       <img src="{{asset('assets\website\images\avatar.jpg')}}" alt="avatar" />
                                     </div>
                                     <div class="col-md-11">
                                    
@@ -145,7 +147,6 @@
                                                 <i class="fa fa-thumbs-o-up"></i> <span class="count">1</span>  --}}
                                                 <span><i class="fa fa-calendar"></i>{{$comment->created_at}}</span>
                                              </div>
-                                             <ul class="child_replay"></ul>
                                           </div>
                                        </div>
                                        @empty
@@ -153,6 +154,8 @@
                                        @endforelse
                               </div>
                            </div>
+                        </div>
+                     </div>    
 
                          
          

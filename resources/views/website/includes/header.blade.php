@@ -18,14 +18,13 @@
     <title>{{$setting->name}}</title>
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{{asset('assets/website/images/favicon.ico')}}">
     
     <!-- All CSS Plugins -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/plugin.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/website/css/plugin.css')}}">
     
     <!-- Main CSS Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/website/css/style.css')}}">
     
     <!-- Google Web Fonts  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">

@@ -60,10 +60,11 @@
                              </div>
                                   </div>
                   
-                  
+                                  <div class="col-sm-12">
                                <div class="text-left">      
-                               <button type="submit" class="btn btn-primary">Send</button>
+                               <button type="submit" class="btn btn-primary" style="margin-bottom:20px ">Send</button>
                                </div>
+                              </div>
 
                                 </form>
                                </div>

@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <!-- Css -->
-    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" >
-    <link rel="stylesheet" href="{{asset('assets/css/dashboard-style.css')}}" />
+    <link href="{{asset('assets/dashboard/css/bootstrap.min.css')}}" rel="stylesheet" >
+    <link rel="stylesheet" href="{{asset('assets/dashboard/css/dashboard-style.css')}}" />
 
     <!-- Font awesome -->
-    <link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}" />
-    <script src="{{asset('assets/css/tailwind.css')}}"></script>
-
-    @vite(['resources/js/app.js'])
+    <link rel="stylesheet" href="{{asset('assets/dashboard/css/all.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/dashboard/css/responsive.css')}}" />
+    <script src="{{asset('assets/dashboard/css/tailwind.css')}}"></script>
 
   </head>
   <body>

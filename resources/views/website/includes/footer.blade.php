@@ -1,10 +1,11 @@
                        <!-- Footer Start -->
                        <div class="col-md-12 page-body margin-top-50 padding-30 footer">
                         <footer>
+                          <h2 class="subscribe-title">Subscribe to my weekly newsletter</h2>
+
                           <h2 class="title-cut">
                             <span class="top-cut"></span>
                             <span class="bottom-cut"></span>
-                            <p>Subscribe to my weekly newsletter</p>
 
                           <form class="subscribe" method="post" action="{{route('storemailinglist')}}">
                             @csrf
@@ -50,11 +51,11 @@
   
   
   <!-- All Javascript Plugins  -->
-  <script type="text/javascript" src="{{asset('assets/js/jquery.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/js/plugin.js')}}"></script>
+  <script type="text/javascript" src="{{asset('assets/website/js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('assets/website/js/plugin.js')}}"></script>
   
   <!-- Main Javascript File  -->
-  <script type="text/javascript" src="{{asset('assets/js/scripts.js')}}"></script>
+  <script type="text/javascript" src="{{asset('assets/website/js/scripts.js')}}"></script>
 
   
  </body>

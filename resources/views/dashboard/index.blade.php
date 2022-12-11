@@ -2,25 +2,25 @@
 @section('content')
     <section class="col-md-8 ">
         <div class="intro-img">
-        <img src="{{asset('assets/images/dashboard/intro.png')}}" alt="">
+        <img src="{{asset('assets/dashboard/images/intro.png')}}" alt="">
         </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="intro-block">
                     <i class="fa fa-bullhorn"></i>
-                    <a href="{{route('showposts')}}" target="_blank">Posts</a>    
+                    <a href="{{route('showposts')}}">Posts</a>    
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="intro-block">
                     <i class="fa fa-sitemap"></i>
-                    <a href="{{route('showcategories')}}" target="_blank">Categories</a>    
+                    <a href="{{route('showcategories')}}" >Categories</a>    
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="intro-block">
                     <i class="fa fa-comments"></i>
-                    <a  href="" target="_blank">Comments</a>    
+                    <a  href="{{route('showcomments')}}" >Comments</a>    
                 </div>
             </div>
             <div class="col-md-4">
@@ -32,7 +32,7 @@
             <div class="col-md-4">
                 <div class="intro-block">
                     <i class="fa fa-cog"></i>
-                    <a  href="{{route('setting')}}" target="_blank">Setting</a>    
+                    <a  href="{{route('setting')}}">Setting</a>    
                 </div>
             </div>
             <div class="col-md-4">
